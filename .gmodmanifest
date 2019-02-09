@@ -1,0 +1,10 @@
+name: "io"
+author: "noomlib"
+
+version: "0.0.1"
+repository: "github://noomlib/noomlib-io"
+
+platform: "lua"
+
+projectBuilds: 
+	"noomlib/io/exports": "noomlib_io"
