@@ -15,6 +15,12 @@ return function (describe, expect, it)
         buffer = noomlib_io.BufferWriter(10000)
 
         expect(buffer.get_size()).to.equal(10000)
+
+        for index, value in ipairs(buffer.get_buffer(false)) do
+            if value ~= -1 then
+                error("preallocation failed")
+            end
+        end
     end)
 
     it("BufferWriter(table) - control bytes", function ()
